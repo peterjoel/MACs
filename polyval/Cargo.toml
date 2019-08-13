@@ -10,6 +10,15 @@ keywords = ["aes-gcm-siv", "crypto", "ghash", "gcm", "universal-hashing"]
 categories = ["cryptography", "no-std"]
 
 [dependencies]
+byteorder = { version = "1", default-features = false }
+zeroize = { version = "0.9", optional = true, default-features = false }
+
+[dev-dependencies]
+crypto-mac = { version = "0.7", features = ["dev"] }
+hex-literal = "0.1"
+
+[features]
+nightly = []
 
 [badges]
 travis-ci = { repository = "RustCrypto/hashes" }
